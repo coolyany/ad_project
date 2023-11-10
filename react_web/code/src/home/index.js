@@ -66,38 +66,38 @@ export default function MyHome(){
         <Header style={headerStyle_1} >
             <Row>
                 <Col span={24}>
-                    <img
+                    {/* <img
                         width={'100%'}
                         height={'30%'}
                         src="./1.png"
-                    />
+                    /> */}
                 </Col>
             </Row>
             <Row>
                 <Col span={24}>
-                    <img
+                    {/* <img
                         width={'100%'}
                         height={'30%'}
                         src="./2.png"
-                    />
+                    /> */}
                 </Col>
             </Row>
             <Row>
                 <Col span={24}>
-                    <img
+                    {/* <img
                         width={'100%'}
                         height={'30%'}
                         src="./3.png"
-                    />
+                    /> */}
                 </Col>
             </Row>
             <Row>
                 <Col span={24}>
-                    <img
+                    {/* <img
                         width={'100%'}
                         height={'30%'}
                         src="./4.png"
-                    />
+                    /> */}
                 </Col>
             </Row>
         </Header>
