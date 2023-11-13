@@ -1,0 +1,29 @@
+.layout {
+    width: 100vw;
+    height: 100vh;
+}
+.head{
+    width:100%;
+    height:60px;
+   background-color: rgb(255, 255, 255);
+   display: flex;
+    padding-left:10vw ;
+   
+}
+.logo{
+    margin-right: 3vw;
+}
+.homePageItem{
+    height: 100%;
+    background-color:aliceblue;
+    margin-right: 2vw;
+    
+}
+.homePageItem:hover{
+    background-color:brown;
+}
+.contentItem{
+    height: 97%;
+    margin-right: 20px;
+    background-color:aliceblue;
+}
