@@ -6,7 +6,7 @@ export default function HeaderContent(props){
     
     return(
         <div>
-            <img src={props.url} alt="logo"/>
+            <img src={props.url}  alt="logo"/>
         </div>
     )
 }

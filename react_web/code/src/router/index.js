@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import React from 'react'
 import MyHome from "../home"
+import AdInfo from '../page/adinfo'
 
 export default function IRouter(){
 
@@ -11,8 +12,8 @@ export default function IRouter(){
                 </Switch> */}
                  <Routes>
                     <Route path="/" exact element={<MyHome/>}/>
-                    {/* <Route path="/history" element={<History/>}/>
-                    <Route path="/about" element={<About/>}/> */}
+                    <Route path="/adinfo" element={<AdInfo/>}/>
+                    {/* <Route path="/" element={<About/>}/> */}
                 </Routes>
 
             </Router>
