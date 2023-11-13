@@ -5,7 +5,7 @@ export default function AdInfo(){
 
     return(
         <div>
-                hhhhhhhhhhhhhhhhhhhhhhhhhh
+               
         </div>
     )
 };
