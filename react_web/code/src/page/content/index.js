@@ -126,7 +126,7 @@ export default function MyContent(){
                 )}
             />
 
-            <Descriptions title="上海工作室外卖 微信: wx_xxx QQ: qq_xxx" items={items} />
+            <Descriptions title="xxx" items={items} />
           </div>
     )
 };
