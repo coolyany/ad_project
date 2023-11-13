@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import { Descriptions, theme, Avatar, List, Space  } from 'antd';
+import { Descriptions, theme, Avatar, List, QRCode  } from 'antd';
 import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
 import UserInfo from '../userinfo';
 
@@ -9,12 +9,28 @@ export default function MyContent(){
         length: 3,
     }).map((_, i) => ({
         href: '/userinfo',
-        title: `ad design part ${i + 1}`,
+        title: `people ${i + 1}`,
         avatar: `https://xsgames.co/randomusers/avatar.php?g=pixel&key=${i}`,
         description:
-          'Ad Design, a design language for background applications',
+          `Oil pressure in various districts of Shanghai
+          Intimate service, safe and reliable
+          Rest assured consumption, integrity first`,
         content:
-          'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+        `If you can't handle it, please don't disturb
+        Shanghai regional oil pressure SPA
+        Jiangsu and Zhejiang clubs can also be arranged
+        【 Studio Introduction 】
+        All the studios of the beauty of attendance are high-grade residential areas, or high-grade apartments, regular disinfection, clean, sanitary, no registration, very convenient!
+        
+        【 Service 】 : All the beautiful women in the studio are full service! Only you can't think of, nothing we can't do, no need to get a room! No registration required! Safe, reliable, convenient, most girls can come to the door, can package night.
+        【 Various types of beauty 】
+        After 00 just went to the sea pure student girls, boutique stewardesses part-time, top-line car models, Tiktok network red part-time, nurses, white-collar workers, good family part-time, and so on... Everything, welcome the boss to come to consult and make an appointment.
+        【 Studio beauty reservation process 】
+        We will provide exclusive photo album links, (with services, photos, videos, seats) let you choose the type you like!
+        After confirming the beauty of the offer, I will confirm her studio address again, and then set the specific time, and pay the reservation money [the first appointment, must pay 100 reservation money, old customers do not need to] to confirm the appointment for you.
+        You according to the appointment time, to the United States paper studio, see the girl himself, satisfied with the payment to start, dissatisfied package return
+        As long as you need it, it's important to be reliable
+        Don't hesitate to contact me now!`
       }));
 
       const IconText = ({ icon, text }) => (
@@ -63,7 +79,6 @@ export default function MyContent(){
 
     return(
         <div style={{ padding: 12, minHeight: 1024, background: colorBgContainer }}>
-            <Descriptions title="上海工作室外卖 微信: wx_xxx QQ: qq_xxx" items={items} />
            
             <List
                 itemLayout="vertical"
@@ -89,22 +104,29 @@ export default function MyContent(){
                     <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
                     ]}
                     extra={
-                    <img
-                        width={272}
-                        alt="logo"
-                        src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-                    />
+                    // <img
+                    //     width={272}
+                    //     alt="logo"
+                    //     src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
+                    // />
+                        <QRCode
+                            errorLevel="H"
+                            value="shpincha18.com"
+                            // icon="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+                        />
                     }
                 >
                     <List.Item.Meta
-                    avatar={<Avatar src={item.avatar} />}
-                    title={<a href={item.href}>{item.title}</a>}
-                    description={item.description}
+                        avatar={<Avatar src={item.avatar} />}
+                        title={<a href={item.href}>{item.title}</a>}
+                        description={item.description}
                     />
                     {item.content}
                 </List.Item>
                 )}
             />
-        </div>
+
+            <Descriptions title="上海工作室外卖 微信: wx_xxx QQ: qq_xxx" items={items} />
+          </div>
     )
 };
