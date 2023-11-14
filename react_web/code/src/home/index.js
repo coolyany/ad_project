@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {Suspense, useState, useEffect} from 'react';
 import { Breadcrumb, Layout, Flex } from 'antd';
-import { useNavigate} from 'react-router-dom';
+import { Outlet, useLocation, useNavigate} from 'react-router-dom';
 import MyContent from '../page/content'
 import MyHeader from '../header'
 // const { Header, Content, Footer } = Layout;
@@ -9,16 +9,16 @@ import { RouterPath } from "../router";
 
 export default function MyHome(){
 
-    const { Header, Footer, Sider, Content } = Layout;
-    const navigate = useNavigate();
+    const { Header, Footer, Content } = Layout;
+    const naviagate = useNavigate();
 
     const headerStyle = {
         color: '#fff',
         height: 512,
         backgroundColor: '#DCDCDC',
         display:Flex,
-        }
-    
+    }
+
     return (
     <Layout>
         <Header style={headerStyle} >
@@ -31,10 +31,9 @@ export default function MyHome(){
                 <Breadcrumb.Item>info3</Breadcrumb.Item>
             </Breadcrumb>
 
-            <MyContent />
-            {/* <div> */}
-                {/* {navigate(RouterPath.content)} */}
-            {/* </div> */}
+            <Suspense fallback={<div>loding</div>}>
+                <Outlet />
+            </Suspense>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Design ©2023 Created by CoolYang</Footer>
     </Layout>

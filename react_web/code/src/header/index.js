@@ -1,18 +1,32 @@
-import React from 'react';
-import { Flex } from 'antd';
+import React, {useEffect} from 'react';
+import { Flex, Spin } from 'antd';
 import { useNavigate} from 'react-router-dom';
 
 export default function MyHeader(){
     const naviagate = useNavigate();
+    const [spinning, setSpinning] = React.useState(false);
+
+    //延时3s
+    const showLoader = () => {
+        // setSpinning(true);
+        setTimeout(() => {
+            setSpinning(true);
+        }, 3000);
+    };
 
     const onClickAdInfo = () => {
-        // history.push('/adinfo');
-        // <Link to="/adinfo"></Link>
-        naviagate("/home/adinfo");
+        naviagate("/main/adinfo");
     }
+
+    useEffect(() => {
+        if(spinning){
+            naviagate("/main/adinfo");
+        }
+    },[spinning])
 
     return(
         <Flex  vertical style={{width:'100%', height:'100%'}}>
+            {/* <Spin spinning={spinning} fullscreen /> */}
             <img
                 width={'100%'}
                 height={'20%'}

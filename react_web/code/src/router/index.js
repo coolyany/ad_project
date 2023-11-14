@@ -26,18 +26,17 @@ const MyContent = React.lazy(() => import("../page/content"));
 
 export const RouterPath = {
     home: "/main",
-    // content: "/main/content",
+    content: "/main/content",
     adinfo: "/main/adinfo",
     userinfo: "/main/userinfo",
   };
 
   const router = [
     { index:true, element: <Navigate to={RouterPath.home} /> },
-    { path: RouterPath.home, element: <MyHome /> },
-    {
+    { path: RouterPath.home, element: <MyHome />,
         children:[
             { index: true, element: <Navigate to={RouterPath.content} /> },
-            // { path: RouterPath.content, element: <MyContent /> },
+            { path: RouterPath.content, element: <MyContent /> },
             { path: RouterPath.adinfo, element: <AdInfo /> },
             { path: RouterPath.userinfo, element: <UserInfo /> },
         ]

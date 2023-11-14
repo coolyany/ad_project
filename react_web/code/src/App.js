@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { useRoutes } from "react-router-dom";
 import router from "./router"
 function App() {
-    return <Suspense>{useRoutes(router)}</Suspense>;
+    return <Suspense fallback={<div>loding</div>}>{useRoutes(router)}</Suspense>;
 }
 
 export default App;

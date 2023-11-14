@@ -1,6 +1,7 @@
-import React, { useState }  from 'react';
+import React, { Suspense, useState }  from 'react';
 import { Descriptions, theme, Avatar, List, QRCode  } from 'antd';
 import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
+import { Outlet} from 'react-router-dom';
 import UserInfo from '../userinfo';
 
 
@@ -8,7 +9,7 @@ export default function MyContent(){
     const listData = Array.from({
         length: 3,
     }).map((_, i) => ({
-        href: '/userinfo',
+        href: '/main/userinfo',
         title: `people ${i + 1}`,
         avatar: `https://xsgames.co/randomusers/avatar.php?g=pixel&key=${i}`,
         description:
@@ -111,7 +112,7 @@ export default function MyContent(){
                     // />
                         <QRCode
                             errorLevel="H"
-                            value="shpincha18.com"
+                            value="https://shpincha18.com"
                             // icon="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
                         />
                     }
